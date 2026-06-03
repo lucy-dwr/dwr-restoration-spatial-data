@@ -47,3 +47,16 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# targets pipeline store
+_targets/
+
+# renv library (restore from renv.lock instead)
+renv/library/
+renv/staging/
+
+# Temporary Office lock files
+~$*
+
+# Generated sharing artifacts (not source data, not pipeline outputs)
+data-raw/**/*.xlsx
