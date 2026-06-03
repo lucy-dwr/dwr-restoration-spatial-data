@@ -178,6 +178,37 @@
       "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
       "Repository": "CRAN"
     },
+    "cellranger": {
+      "Package": "cellranger",
+      "Version": "1.1.0",
+      "Source": "Repository",
+      "Title": "Translate Spreadsheet Cell Ranges to Rows and Columns",
+      "Authors@R": "c( person(\"Jennifer\", \"Bryan\", , \"jenny@stat.ubc.ca\", c(\"cre\", \"aut\")), person(\"Hadley\", \"Wickham\", , \"hadley@rstudio.com\", \"ctb\") )",
+      "Description": "Helper functions to work with spreadsheets and the \"A1:D10\" style of cell range specification.",
+      "Depends": [
+        "R (>= 3.0.0)"
+      ],
+      "License": "MIT + file LICENSE",
+      "LazyData": "true",
+      "URL": "https://github.com/rsheets/cellranger",
+      "BugReports": "https://github.com/rsheets/cellranger/issues",
+      "Suggests": [
+        "covr",
+        "testthat (>= 1.0.0)",
+        "knitr",
+        "rmarkdown"
+      ],
+      "RoxygenNote": "5.0.1.9000",
+      "VignetteBuilder": "knitr",
+      "Imports": [
+        "rematch",
+        "tibble"
+      ],
+      "NeedsCompilation": "no",
+      "Author": "Jennifer Bryan [cre, aut], Hadley Wickham [ctb]",
+      "Maintainer": "Jennifer Bryan <jenny@stat.ubc.ca>",
+      "Repository": "CRAN"
+    },
     "class": {
       "Package": "class",
       "Version": "7.3-23",
@@ -286,6 +317,83 @@
       "NeedsCompilation": "yes",
       "Author": "Gábor Csárdi [aut, cre], Hadley Wickham [ctb], Kirill Müller [ctb], Salim Brüggemann [ctb] (ORCID: <https://orcid.org/0000-0002-5329-5987>), Posit Software, PBC [cph, fnd] (ROR: <https://ror.org/03wc8by49>)",
       "Maintainer": "Gábor Csárdi <gabor@posit.co>",
+      "Repository": "CRAN"
+    },
+    "cpp11": {
+      "Package": "cpp11",
+      "Version": "0.5.5",
+      "Source": "Repository",
+      "Title": "A C++11 Interface for R's C Interface",
+      "Authors@R": "c( person(\"Davis\", \"Vaughan\", email = \"davis@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0003-4777-038X\")), person(\"Jim\",\"Hester\", role = \"aut\", comment = c(ORCID = \"0000-0002-2739-7082\")), person(\"Romain\", \"François\", role = \"aut\", comment = c(ORCID = \"0000-0002-2444-4226\")), person(\"Benjamin\", \"Kietzman\", role = \"ctb\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Provides a header only, C++11 interface to R's C interface.  Compared to other approaches 'cpp11' strives to be safe against long jumps from the C API as well as C++ exceptions, conform to normal R function semantics and supports interaction with 'ALTREP' vectors.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://cpp11.r-lib.org, https://github.com/r-lib/cpp11",
+      "BugReports": "https://github.com/r-lib/cpp11/issues",
+      "Depends": [
+        "R (>= 4.0.0)"
+      ],
+      "Suggests": [
+        "bench",
+        "brio",
+        "callr",
+        "cli",
+        "covr",
+        "decor",
+        "desc",
+        "ggplot2",
+        "glue",
+        "knitr",
+        "lobstr",
+        "mockery",
+        "progress",
+        "rmarkdown",
+        "scales",
+        "Rcpp",
+        "testthat (>= 3.2.0)",
+        "tibble",
+        "utils",
+        "vctrs",
+        "withr"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Config/Needs/cpp11/cpp_register": "brio, cli, decor, desc, glue, tibble, vctrs",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3",
+      "NeedsCompilation": "no",
+      "Author": "Davis Vaughan [aut, cre] (ORCID: <https://orcid.org/0000-0003-4777-038X>), Jim Hester [aut] (ORCID: <https://orcid.org/0000-0002-2739-7082>), Romain François [aut] (ORCID: <https://orcid.org/0000-0002-2444-4226>), Benjamin Kietzman [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Davis Vaughan <davis@posit.co>",
+      "Repository": "CRAN"
+    },
+    "crayon": {
+      "Package": "crayon",
+      "Version": "1.5.3",
+      "Source": "Repository",
+      "Title": "Colored Terminal Output",
+      "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Brodie\", \"Gaslam\", , \"brodie.gaslam@yahoo.com\", role = \"ctb\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "The crayon package is now superseded. Please use the 'cli' package for new projects.  Colored terminal output on terminals that support 'ANSI' color and highlight codes. It also works in 'Emacs' 'ESS'. 'ANSI' color support is automatically detected. Colors and highlighting can be combined and nested. New styles can also be created easily.  This package was inspired by the 'chalk' 'JavaScript' project.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://r-lib.github.io/crayon/, https://github.com/r-lib/crayon",
+      "BugReports": "https://github.com/r-lib/crayon/issues",
+      "Imports": [
+        "grDevices",
+        "methods",
+        "utils"
+      ],
+      "Suggests": [
+        "mockery",
+        "rstudioapi",
+        "testthat",
+        "withr"
+      ],
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.1",
+      "Collate": "'aaa-rstudio-detect.R' 'aaaa-rematch2.R' 'aab-num-ansi-colors.R' 'aac-num-ansi-colors.R' 'ansi-256.R' 'ansi-palette.R' 'combine.R' 'string.R' 'utils.R' 'crayon-package.R' 'disposable.R' 'enc-utils.R' 'has_ansi.R' 'has_color.R' 'link.R' 'styles.R' 'machinery.R' 'parts.R' 'print.R' 'style-var.R' 'show.R' 'string_operations.R'",
+      "NeedsCompilation": "no",
+      "Author": "Gábor Csárdi [aut, cre], Brodie Gaslam [ctb], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
       "Repository": "CRAN"
     },
     "dplyr": {
@@ -455,6 +563,70 @@
       "Maintainer": "Jennifer Bryan <jenny@posit.co>",
       "Repository": "CRAN"
     },
+    "hms": {
+      "Package": "hms",
+      "Version": "1.1.4",
+      "Source": "Repository",
+      "Title": "Pretty Time of Day",
+      "Date": "2025-10-11",
+      "Authors@R": "c( person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-1416-3412\")), person(\"R Consortium\", role = \"fnd\"), person(\"Posit Software, PBC\", role = \"fnd\", comment = c(ROR = \"03wc8by49\")) )",
+      "Description": "Implements an S3 class for storing and formatting time-of-day values, based on the 'difftime' class.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://hms.tidyverse.org/, https://github.com/tidyverse/hms",
+      "BugReports": "https://github.com/tidyverse/hms/issues",
+      "Imports": [
+        "cli",
+        "lifecycle",
+        "methods",
+        "pkgconfig",
+        "rlang (>= 1.0.2)",
+        "vctrs (>= 0.3.8)"
+      ],
+      "Suggests": [
+        "crayon",
+        "lubridate",
+        "pillar (>= 1.1.0)",
+        "testthat (>= 3.0.0)"
+      ],
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.3.3.9000",
+      "NeedsCompilation": "no",
+      "Author": "Kirill Müller [aut, cre] (ORCID: <https://orcid.org/0000-0002-1416-3412>), R Consortium [fnd], Posit Software, PBC [fnd] (ROR: <https://ror.org/03wc8by49>)",
+      "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+      "Repository": "CRAN"
+    },
+    "jsonlite": {
+      "Package": "jsonlite",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Title": "A Simple and Robust JSON Parser and Generator for R",
+      "License": "MIT + file LICENSE",
+      "Depends": [
+        "methods"
+      ],
+      "Authors@R": "c( person(\"Jeroen\", \"Ooms\", role = c(\"aut\", \"cre\"), email = \"jeroenooms@gmail.com\", comment = c(ORCID = \"0000-0002-4035-0289\")), person(\"Duncan\", \"Temple Lang\", role = \"ctb\"), person(\"Lloyd\", \"Hilaiel\", role = \"cph\", comment=\"author of bundled libyajl\"))",
+      "URL": "https://jeroen.r-universe.dev/jsonlite https://arxiv.org/abs/1403.2805",
+      "BugReports": "https://github.com/jeroen/jsonlite/issues",
+      "Maintainer": "Jeroen Ooms <jeroenooms@gmail.com>",
+      "VignetteBuilder": "knitr, R.rsp",
+      "Description": "A reasonably fast JSON parser and generator, optimized for statistical  data and the web. Offers simple, flexible tools for working with JSON in R, and is particularly powerful for building pipelines and interacting with a web API.  The implementation is based on the mapping described in the vignette (Ooms, 2014). In addition to converting JSON data from/to R objects, 'jsonlite' contains  functions to stream, validate, and prettify JSON data. The unit tests included  with the package verify that all edge cases are encoded and decoded consistently  for use with dynamic data in systems and applications.",
+      "Suggests": [
+        "httr",
+        "vctrs",
+        "testthat",
+        "knitr",
+        "rmarkdown",
+        "R.rsp",
+        "sf"
+      ],
+      "RoxygenNote": "7.3.2",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "yes",
+      "Author": "Jeroen Ooms [aut, cre] (<https://orcid.org/0000-0002-4035-0289>), Duncan Temple Lang [ctb], Lloyd Hilaiel [cph] (author of bundled libyajl)",
+      "Repository": "CRAN"
+    },
     "lifecycle": {
       "Package": "lifecycle",
       "Version": "1.0.5",
@@ -607,6 +779,64 @@
       "NeedsCompilation": "no",
       "Repository": "CRAN"
     },
+    "prettyunits": {
+      "Package": "prettyunits",
+      "Version": "1.2.0",
+      "Source": "Repository",
+      "Title": "Pretty, Human Readable Formatting of Quantities",
+      "Authors@R": "c( person(\"Gabor\", \"Csardi\", email=\"csardi.gabor@gmail.com\", role=c(\"aut\", \"cre\")), person(\"Bill\", \"Denney\", email=\"wdenney@humanpredictions.com\", role=c(\"ctb\"), comment=c(ORCID=\"0000-0002-5759-428X\")), person(\"Christophe\", \"Regouby\", email=\"christophe.regouby@free.fr\", role=c(\"ctb\")) )",
+      "Description": "Pretty, human readable formatting of quantities. Time intervals: '1337000' -> '15d 11h 23m 20s'. Vague time intervals: '2674000' -> 'about a month ago'. Bytes: '1337' -> '1.34 kB'. Rounding: '99' with 3 significant digits -> '99.0' p-values: '0.00001' -> '<0.0001'. Colors: '#FF0000' -> 'red'. Quantities: '1239437' -> '1.24 M'.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/r-lib/prettyunits",
+      "BugReports": "https://github.com/r-lib/prettyunits/issues",
+      "Depends": [
+        "R(>= 2.10)"
+      ],
+      "Suggests": [
+        "codetools",
+        "covr",
+        "testthat"
+      ],
+      "RoxygenNote": "7.2.3",
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
+      "Author": "Gabor Csardi [aut, cre], Bill Denney [ctb] (<https://orcid.org/0000-0002-5759-428X>), Christophe Regouby [ctb]",
+      "Maintainer": "Gabor Csardi <csardi.gabor@gmail.com>",
+      "Repository": "CRAN"
+    },
+    "progress": {
+      "Package": "progress",
+      "Version": "1.2.3",
+      "Source": "Repository",
+      "Title": "Terminal Progress Bars",
+      "Authors@R": "c( person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")), person(\"Rich\", \"FitzJohn\", role = \"aut\"), person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")) )",
+      "Description": "Configurable Progress bars, they may include percentage, elapsed time, and/or the estimated completion time. They work in terminals, in 'Emacs' 'ESS', 'RStudio', 'Windows' 'Rgui' and the 'macOS' 'R.app'. The package also provides a 'C++' 'API', that works with or without 'Rcpp'.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/r-lib/progress#readme, http://r-lib.github.io/progress/",
+      "BugReports": "https://github.com/r-lib/progress/issues",
+      "Depends": [
+        "R (>= 3.6)"
+      ],
+      "Imports": [
+        "crayon",
+        "hms",
+        "prettyunits",
+        "R6"
+      ],
+      "Suggests": [
+        "Rcpp",
+        "testthat (>= 3.0.0)",
+        "withr"
+      ],
+      "Config/Needs/website": "tidyverse/tidytemplate",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "RoxygenNote": "7.2.3",
+      "NeedsCompilation": "no",
+      "Author": "Gábor Csárdi [aut, cre], Rich FitzJohn [aut], Posit Software, PBC [cph, fnd]",
+      "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
+      "Repository": "CRAN"
+    },
     "proxy": {
       "Package": "proxy",
       "Version": "0.4-27",
@@ -630,6 +860,67 @@
       "NeedsCompilation": "yes",
       "Author": "David Meyer [aut, cre], Christian Buchta [aut]",
       "Maintainer": "David Meyer <David.Meyer@R-project.org>",
+      "Repository": "CRAN"
+    },
+    "readxl": {
+      "Package": "readxl",
+      "Version": "1.5.0",
+      "Source": "Repository",
+      "Title": "Read Excel Files",
+      "Authors@R": "c( person(\"Hadley\", \"Wickham\", , \"hadley@posit.co\", role = \"aut\", comment = c(ORCID = \"0000-0003-4757-117X\")), person(\"Jennifer\", \"Bryan\", , \"jenny@posit.co\", role = c(\"aut\", \"cre\"), comment = c(ORCID = \"0000-0002-6983-2759\")), person(\"Posit, PBC\", role = c(\"cph\", \"fnd\"), comment = \"Copyright holder of all R code and all C/C++ code without explicit copyright attribution\"), person(\"Marcin\", \"Kalicinski\", role = c(\"ctb\", \"cph\"), comment = \"Author of included RapidXML code\"), person(\"Komarov Valery\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"), person(\"Christophe Leitienne\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"), person(\"Bob Colbert\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"), person(\"David Hoerl\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\"), person(\"Evan Miller\", role = c(\"ctb\", \"cph\"), comment = \"Author of included libxls code\") )",
+      "Description": "Import excel files into R. Supports '.xls' via the embedded 'libxls' C library <https://github.com/libxls/libxls> and '.xlsx' via the embedded 'RapidXML' C++ library <https://rapidxml.sourceforge.net/>.  Works on Windows, Mac and Linux without external dependencies.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://readxl.tidyverse.org, https://github.com/tidyverse/readxl",
+      "BugReports": "https://github.com/tidyverse/readxl/issues",
+      "Depends": [
+        "R (>= 4.1)"
+      ],
+      "Imports": [
+        "cellranger",
+        "tibble (>= 2.0.1)",
+        "utils"
+      ],
+      "Suggests": [
+        "covr",
+        "knitr",
+        "rmarkdown",
+        "testthat (>= 3.1.6)",
+        "withr"
+      ],
+      "LinkingTo": [
+        "cpp11 (>= 0.5.5)",
+        "progress"
+      ],
+      "VignetteBuilder": "knitr",
+      "Config/build/compilation-database": "true",
+      "Config/Needs/website": "tidyverse/tidytemplate, tidyverse",
+      "Config/roxygen2/version": "8.0.0",
+      "Config/testthat/edition": "3",
+      "Encoding": "UTF-8",
+      "Note": "libxls v1.6.3 c199d13",
+      "NeedsCompilation": "yes",
+      "Author": "Hadley Wickham [aut] (ORCID: <https://orcid.org/0000-0003-4757-117X>), Jennifer Bryan [aut, cre] (ORCID: <https://orcid.org/0000-0002-6983-2759>), Posit, PBC [cph, fnd] (Copyright holder of all R code and all C/C++ code without explicit copyright attribution), Marcin Kalicinski [ctb, cph] (Author of included RapidXML code), Komarov Valery [ctb, cph] (Author of included libxls code), Christophe Leitienne [ctb, cph] (Author of included libxls code), Bob Colbert [ctb, cph] (Author of included libxls code), David Hoerl [ctb, cph] (Author of included libxls code), Evan Miller [ctb, cph] (Author of included libxls code)",
+      "Maintainer": "Jennifer Bryan <jenny@posit.co>",
+      "Repository": "CRAN"
+    },
+    "rematch": {
+      "Package": "rematch",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Title": "Match Regular Expressions with a Nicer 'API'",
+      "Author": "Gabor Csardi",
+      "Maintainer": "Gabor Csardi <csardi.gabor@gmail.com>",
+      "Description": "A small wrapper on 'regexpr' to extract the matches and captured groups from the match of a regular expression to a character vector.",
+      "License": "MIT + file LICENSE",
+      "URL": "https://github.com/gaborcsardi/rematch",
+      "BugReports": "https://github.com/gaborcsardi/rematch/issues",
+      "RoxygenNote": "5.0.1.9000",
+      "Suggests": [
+        "covr",
+        "testthat"
+      ],
+      "Encoding": "UTF-8",
+      "NeedsCompilation": "no",
       "Repository": "CRAN"
     },
     "renv": {

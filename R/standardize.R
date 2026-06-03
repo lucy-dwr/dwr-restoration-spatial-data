@@ -4,8 +4,9 @@
 #'   1. Reproject to NAD83 / California Albers (EPSG:3310)
 #'   2. Upgrade POLYGON -> MULTIPOLYGON and POINT -> MULTIPOINT
 #'   3. Normalize early_implementation to logical
-#'   4. Truncate over-length text fields
-#'   5. Drop unrecognized columns and enforce submission field order
+#'   4. Normalize email casing and zero-valued habitat acreage fields
+#'   5. Truncate over-length text fields
+#'   6. Drop unrecognized columns and enforce submission field order
 #'
 #' Program-assigned fields (project_id, update_date, funding_gap) are not added
 #' here — they are assigned downstream by the program-wide ingestion pipeline.
@@ -13,6 +14,8 @@
 #' @param sf_obj Validated sf object from validate_submission().
 #' @return Standardized sf object conforming to RestorationProjectSubmission.
 standardize <- function(sf_obj) {
+  source_label <- attr(sf_obj, "source")
+
   # Reproject
   if (!isTRUE(sf::st_crs(sf_obj)$epsg == 3310)) {
     sf_obj <- sf::st_transform(sf_obj, 3310)
@@ -31,6 +34,22 @@ standardize <- function(sf_obj) {
   if (!is.logical(ei)) {
     sf_obj$early_implementation <- tolower(trimws(as.character(ei))) %in%
       c("true", "t", "yes", "1")
+  }
+
+  # Normalize contact email casing
+  sf_obj$contact_email <- tolower(trimws(as.character(sf_obj$contact_email)))
+
+  # Habitat-specific acreage fields should only carry positive accounting values.
+  habitat_acreage_fields <- c(
+    "acreage_bypass_floodplain",
+    "acreage_fish_food",
+    "acreage_tributary_floodplain",
+    "acreage_tributary_rearing",
+    "acreage_tributary_spawning",
+    "acreage_tidal_wetland"
+  )
+  for (field in intersect(habitat_acreage_fields, names(sf_obj))) {
+    sf_obj[[field]] <- zero_to_na(sf_obj[[field]])
   }
 
   # Normalize enum fields: case-insensitive matching + known aliases
@@ -83,15 +102,23 @@ standardize <- function(sf_obj) {
   if (length(extra) > 0) {
     message("Note: extra column(s) will be dropped: ", paste(extra, collapse = ", "))
   }
-  sf_obj[, present]
+  result <- sf_obj[, present]
+  attr(result, "source") <- source_label
+  result
 }
 
 truncate_str <- function(x, max_len) {
   ifelse(!is.na(x) & nchar(x) > max_len, substr(x, 1, max_len), x)
 }
 
+zero_to_na <- function(x) {
+  v <- suppressWarnings(as.numeric(x))
+  v[!is.na(v) & v == 0] <- NA_real_
+  v
+}
+
 # Known aliases for project_stage values that differ from the schema by more
-# than case (e.g. "Post-Construction" is shorthand for the full enum value).
+# than case (e.g. "Post-Construction" is shorthand for the full enum value)
 STAGE_ALIASES <- c(
   "post-construction"                    = "post-construction monitoring and science",
   "post construction"                    = "post-construction monitoring and science",
@@ -110,7 +137,7 @@ normalize_stage <- function(x) {
 }
 
 # Normalize a semicolon-delimited enum field: trim tokens, match
-# case-insensitively against allowed values, rejoin with ";".
+# case-insensitively against allowed values, rejoin with ";"
 normalize_enum_tokens <- function(x, allowed) {
   schema_lower <- tolower(allowed)
   vapply(x, function(val) {

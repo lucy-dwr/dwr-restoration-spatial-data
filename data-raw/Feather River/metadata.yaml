@@ -1,0 +1,23 @@
+- source_type: email
+  source_name: Ryon Kurth, DWR
+  original_filename: 2023_FRSHIP_As_Built.zip
+  received_date: 2026-05-18
+  received_by: Lucy Andrews
+  content: Shapefile package for the Feather River P68 gravel project as-built, including Bedrock_As-Built_Boundary and Upper_Riffles shapefiles.
+  notes: Received by email with 2025 Gravel Project Projected Site Map.ppkx. Sender described this attachment as one of two shapefile/map files, with one representing the P68 as-built and the other representing the phase 2 or 2024 project design.
+
+- source_type: email
+  source_name: Ryon Kurth, DWR
+  original_filename: 2025 Gravel Project Projected Site Map.ppkx
+  received_date: 2026-05-18
+  received_by: Lucy Andrews
+  content: ArcGIS Pro project package for the Feather River gravel project projected site map, likely representing the phase 2 or 2024 project design context.
+  notes: Received by email with 2023_FRSHIP_As_Built.zip. Kept as raw provenance and map context; the R cleaning pipeline will likely ingest the extracted shapefiles and spreadsheet rather than reading the .ppkx directly.
+
+- source_type: email
+  source_name: Ryon Kurth, DWR
+  original_filename: Feather River Gravel Enhancement Project Data.xlsx
+  received_date: 2026-05-19
+  received_by: Lucy Andrews
+  content: Spatial Data Schema spreadsheet completed for two Feather River gravel projects, with workbook tabs named 2024 and P68.
+  notes: Sender described this as the completed Spatial Data Schema spreadsheet for the two gravel projects.

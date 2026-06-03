@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='en-US'>
+<name>2025 Gravel Project Projected Site Map</name>
+<guid>2098B8EC-9784-41A4-92F4-F0A89FB1612B</guid>
+<version>1.0</version>
+<created></created>
+<modified></modified>
+<catalogpath></catalogpath>
+<snippet>Projected gravel sites </snippet>
+<description></description>
+<summary>Projected gravel sites </summary>
+<title>2025 Gravel Project Projected Site Map</title>
+<tags></tags>
+<type>Project Package</type>
+<typekeywords>
+<typekeyword>Project Package</typekeyword>
+<typekeyword>ppkx</typekeyword>
+<typekeyword>Project</typekeyword>
+<typekeyword>2D</typekeyword>
+<typekeyword>ArcGIS Pro</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<spatialreference></spatialreference>
+<minScale>591657527.591555</minScale>
+<maxScale>1128.4971760000001</maxScale>
+<datalastModifiedTime></datalastModifiedTime>
+<accessinformation></accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>
