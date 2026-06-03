@@ -1,0 +1,52 @@
+{
+  "submission_id": "dwr_restoration-projects_2026-06-03_v01",
+  "date_received": "2026-06-03",
+  "uploaded_by": "Lucy Andrews",
+  "submitted_by": {
+    "name": "Lucy Andrews",
+    "organization": "California Department of Water Resources",
+    "email": ""
+  },
+  "agency": "DWR",
+  "dataset_name": "restoration-projects",
+  "submission_type": "new",
+  "supersedes_submission_id": null,
+  "expected_schema": {
+    "schema_name": "hrl-restoration-schema",
+    "schema_version": "v1.0.0"
+  },
+  "files": [
+    {
+      "file_name": "2026-06-03_v01.gpkg",
+      "file_type": "GeoPackage",
+      "relative_path": "2026-06-03_v01.gpkg",
+      "description": "Final standardized spatial file submitted by DWR.",
+      "is_primary": true
+    }
+  ],
+  "spatial_info": {
+    "geometry_type_expected": "Polygon or MultiPolygon",
+    "crs_expected": "EPSG:3310",
+    "spatial_extent_description": "California HRL restoration project areas"
+  },
+  "data_content": {
+    "feature_type": "restoration_project"
+  },
+  "access_and_sensitivity": {
+    "contains_sensitive_data": false,
+    "sensitivity_notes": "",
+    "sharing_constraints": "",
+    "license_or_use_constraints": ""
+  },
+  "processing_status": {
+    "status": "ready_for_submission",
+    "validation_status": "completed",
+    "standardization_status": "completed"
+  },
+  "storage_location": {
+    "storage_account": "hrldatalakedev",
+    "container": "raw-submissions",
+    "path": "dwr/2026-06-03_v01/"
+  },
+  "notes": "Build warnings:\nValidation issues in data-raw/i07_Habitat_Restoration_Polygons/i07_Habitat_Restoration_Polygons.geojson:\n- construction_start_year is missing in rows: 5\n- construction_completion_year is missing in rows: 5"
+}
