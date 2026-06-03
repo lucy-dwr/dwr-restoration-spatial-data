@@ -1,0 +1,30 @@
+# Provenance metadata for a submission
+# Copy this file into the submission directory and fill in all fields
+# Lines starting with # are comments and are ignored
+
+# How the data was obtained. One of:
+#   agol            — downloaded from an ArcGIS Online portal
+#   email           — received as an email attachment
+#   sharepoint      — downloaded from SharePoint or Teams
+#   cnra_portal     — downloaded directly from a website or FTP
+#   other           — anything else; explain in notes
+source_type:
+
+# Human-readable description of the source (portal name, sender, URL, etc.)
+source_name:
+
+# The original filename as it was received
+original_filename:
+
+# Date the data was received (YYYY-MM-DD)
+received_date:
+
+# Name of the person who received and added this data to the repository
+received_by:
+
+# Narrative of expected file content
+content:
+
+# Optional: any additional context (data version, caveats, processing already applied, etc.)
+# Delete this line or set to ~ if not needed
+notes: ~
