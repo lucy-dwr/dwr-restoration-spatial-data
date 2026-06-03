@@ -1,0 +1,15 @@
+- source_type: agol
+  source_name: DWR internal ArcGIS Online Portal
+  original_filename: i07_Habitat_Restoration_Polygons.geojson
+  received_date: 2026-05-28
+  received_by: Lucy Andrews
+  content: Habitat restoration polygons maintained in DWR's Atlas, including many not in HRL
+  notes: ~
+
+- source_type: email
+  source_name: Josh Martinez, DWR
+  original_filename: i07_attributes.csv
+  received_date: 2026-06-02
+  received_by: Lucy Andrews
+  content: Project attribute data for HRL restoration projects in the i07 dataset, including project stage, contacts, budgets, species, and acreage breakdowns
+  notes: funding_secured left blank — values in source were Yes/No rather than dollar amounts; needs follow-up
